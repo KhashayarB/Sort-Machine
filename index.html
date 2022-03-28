@@ -22,7 +22,13 @@
         <div class="row sort-box mt-4">
             <div class="col-md-12 d-flex justify-content-around align-items-center">
                 <h1 class="m-0">Sort Machine</h1>
-                <button class="setting-btn"><i class="fas fa-cog"></i></button>
+                <div class="dropdown">
+                    <button class="setting-btn dropbtn"><i class="fas fa-cog"></i></button>
+                    <div class="dropdown-content">
+                        <button id="alg1">Insertion Sort</button>
+                        <button id="alg2">Merge Sort</button>
+                    </div>
+                </div>
                 <button class="btn-p">About</button>
             </div>
         </div>
@@ -31,10 +37,10 @@
             <div class="col-md-12 d-flex justify-content-start gap-4">
                 <button class="btn-p">Run</button>
                 <button class="btn-p">Reset</button>
-                <label for="arrayInput">Array
-                    <input id="arrayInput" class="array-input" type="text"
-                        placeholder="Type some array values, or click 'Run' to use random values">
-                </label>
+
+                <input id="arrayInput" class="array-input" type="text"
+                    placeholder="Type some array values, or click 'Run' to use random values">
+
             </div>
 
             <div class="row sort-box mt-4">
