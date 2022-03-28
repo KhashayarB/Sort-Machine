@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="node_modules/bootstrap/dist/js/bootstrap.min.js"
+      defer
+    ></script>
+    <script
+      src="node_modules/@popperjs/core/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script src="assets/scripts/main.js" defer></script>
+    <title>Sort Machine</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <body>
+    <div class="container">
+      <div class="row sort-box mt-4">
+        <div class="col-md-12 d-flex justify-content-around align-items-center">
+          <h1 class="m-0">Sort Machine</h1>
+          <button class="setting-btn"><i class="fas fa-cog"></i></button>
+          <button class="btn-p">About</button>
+        </div>
+      </div>
 
-<body>
-<p>hello world</p>
-</body>
+      <div class="row sort-box mt-4">
+        <div class="col-md-12 d-flex justify-content-start gap-4">
+          <button class="btn-p">Run</button>
+          <button class="btn-p">Reset</button>
+          <select class="length-input">
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <input
+           class="array-input" type="text" placeholder="Type some array values, or click 'Run' to use random values">
+        </div>
 
+        <div class="row sort-box mt-4">
+          <div class="col-md-12">
+              <ol class="index-list">
+                  <li><span>1</span></li>
+                  <li><span>2</span></li>
+                  <li><span>3</span></li>
+                  <li><span>4</span></li>
+                  <li><span>5</span></li>
+              </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
