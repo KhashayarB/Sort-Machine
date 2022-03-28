@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js" defer></script>
-    <script src="assets/scripts/main.js" defer></script>
+    <script src="assets/script/main.js" defer></script>
     <title>Sort Machine</title>
 </head>
 
@@ -31,18 +31,10 @@
             <div class="col-md-12 d-flex justify-content-start gap-4">
                 <button class="btn-p">Run</button>
                 <button class="btn-p">Reset</button>
-                <select class="length-input">
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                </select>
-                <input class="array-input" type="text"
-                    placeholder="Type some array values, or click 'Run' to use random values">
+                <label for="arrayInput">Array
+                    <input id="arrayInput" class="array-input" type="text"
+                        placeholder="Type some array values, or click 'Run' to use random values">
+                </label>
             </div>
 
             <div class="row sort-box mt-4">
