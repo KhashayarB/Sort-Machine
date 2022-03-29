@@ -1,5 +1,7 @@
 const insertionSort = document.getElementById("alg1");
 const mergeSort = document.getElementById("alg2");
+const quickSort = document.getElementById("alg3");
+const heapSort = document.getElementById("alg4");
 
 let arr = [];
 let arraySize = 0;
@@ -17,11 +19,11 @@ let createArray = function () {
 insertionSort.addEventListener("click", () => {
   const insertionSortArray = createArray();
   console.log("Unsorted: ", insertionSortArray);
+
   console.log("Sorted: ", insertionSort(insertionSortArray));
+
   //var startTime = performance.now();
-
   console.time("Insertion Sort");
-
   function insertionSort(array) {
     for (let j = 1; j < array.length; j++) {
       let key = array[j];
@@ -35,7 +37,6 @@ insertionSort.addEventListener("click", () => {
     return arr;
   }
   console.timeEnd("Insertion Sort");
-
   // var endTime = performance.now();
   // var totalTime = endTime - startTime;
   // console.log(totalTime);
@@ -45,6 +46,7 @@ mergeSort.addEventListener("click", () => {
   const mergeSortArray = createArray();
 
   console.log("Unsorted:", mergeSortArray);
+
   console.log("Sorted: ", mergeSort(mergeSortArray));
 
   console.time("Merge Sort");
@@ -83,3 +85,31 @@ mergeSort.addEventListener("click", () => {
   }
   console.timeEnd("Merge Sort");
 });
+
+quickSort.addEventListener("click", () => {
+  const quickSortArray = createArray();
+  console.log("Unsorted:", quickSortArray);
+
+  console.log("Sorted: ", quickSort(quickSortArray));
+
+  console.time("Quick Sort");
+  function quickSort(array) {
+    if (array.length <= 1) {
+      return array;
+    }
+
+    var pivot = array[0];
+
+    var left = [];
+    var right = [];
+
+    for (var i = 1; i < array.length; i++) {
+      array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+    }
+
+    return quickSort(left).concat(pivot, quickSort(right));
+  }
+  console.timeEnd("Quick Sort");
+});
+
+heapSort.addEventListener("click", () => {});
