@@ -119,6 +119,9 @@ body {
     border-bottom: 1px solid #393e46;
 }
 .dropdown-content button:nth-child(3) {
+    border-top: 1px solid #393e46;
+}
+.dropdown-content button:nth-child(4) {
     border-radius: 0 0 1rem 1rem;
     border-top: 1px solid #393e46;
 }
@@ -165,6 +168,7 @@ body {
     padding: 2rem 2rem 1rem 2rem;
     width: 14rem;
     margin: 0;
+    font-size: 1.2rem;
 }
 .dropdown-content-about button {
     border-radius: 0 0 1rem 1rem !important;
