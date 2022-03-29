@@ -60,11 +60,12 @@ mergeSort.addEventListener("click", () => {
     const left = unsortedArray.slice(0, middle);
     const right = unsortedArray.slice(middle);
 
-    // Using recursion to combine the left and right
+    // recursion to combine the left and right
     return merge(mergeSort(left), mergeSort(right));
   }
 
   function merge(left, right) {
+    //start with empty list
     let resultArray = [],
       leftIndex = 0,
       rightIndex = 0;
@@ -131,7 +132,6 @@ heapSort.addEventListener("click", () => {
       i -= 1;
     }
   }
-
   function heapify(heap, i, max) {
     let index;
     let leftChild;

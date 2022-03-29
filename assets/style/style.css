@@ -40,6 +40,7 @@ body {
   background-color: rgb(0, 173, 181);
   color: #393e46;
   transition: all ease 0.3s;
+  position: relative;
 }
 .btn-p:hover {
   color: #eeeeee;
@@ -78,36 +79,107 @@ body {
   word-spacing: 8px;
   padding-left: 1rem;
 }
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    left: -0.5rem;
-    background-color: #EEEEEE;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content button {
-    color: #222831;
-    padding: 12px 16px;
-    display: block;
-    border: none;
-    outline: none;
-  }
-
-  .dropdown-content button:hover {
-      background-color: rgb(0, 173, 181);
-      color: #EEEEEE;
-    }
+  display: none;
+  position: absolute;
+  left: -0.5rem;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  left: 35%;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #eeeeee transparent;
+  z-index: 2;
+}
+/* Links inside the dropdown */
+.dropdown-content button,
+.dropdown-content-about button {
+  color: #222831;
+  padding: 12px 16px;
+  display: block;
+  border: none;
+  outline: none;
+}
+.dropdown-content button:nth-child(1) {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #393e46;
+}
+.dropdown-content button:nth-child(3) {
+  border-top: 1px solid #393e46;
+}
+.dropdown-content button:nth-child(4) {
+  border-radius: 0 0 1rem 1rem;
+  border-top: 1px solid #393e46;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover,
+.dropdown-content-about button:hover {
+  background-color: rgb(0, 173, 181);
+  color: #eeeeee;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-s:hover .dropdown-content-about {
   display: block;
+}
+.dropdown-s {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content-about {
+  display: none;
+  position: absolute;
+  left: -90px;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content-about::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #eeeeee transparent;
+  z-index: 2;
+}
+.dropdown-content-about p {
+  background-color: #eeeeee;
+  color: #393e46;
+  border-radius: 1rem 1rem 0 0;
+  padding: 2rem 2rem 1rem 2rem;
+  width: 14rem;
+  margin: 0;
+  font-size: 1.2rem;
+  user-select: none;
+}
+.dropdown-content-about button {
+  border-radius: 0 0 1rem 1rem !important;
+  padding: 2rem;
+  width: 14rem;
+}
+.dropdown-content-about button:hover a {
+  color: #eeeeee;
+}
+.dropdown-content-about button a {
+  font-size: 1.5rem;
+  color: rgb(0, 173, 181);
 }
