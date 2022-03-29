@@ -131,14 +131,17 @@ body {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content,
-.dropdown:hover .dropdown-content-about {
+.dropdown-s:hover .dropdown-content-about {
   display: block;
 }
-
+.dropdown-s {
+    position: relative;
+    display: inline-block;
+  }
 .dropdown-content-about {
   display: none;
   position: absolute;
-  right: 10px;
+  left: -90px;
   background-color: transparent;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -146,7 +149,7 @@ body {
 .dropdown-content-about::before {
     content:"";
     position: absolute;
-    left: 35%;
+    left: 50%;
     top: -10px;
     width: 0;
     height: 0;
@@ -159,9 +162,19 @@ body {
     background-color: #eeeeee;
     color: #393e46;
     border-radius: 1rem 1rem 0 0;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
+    width: 14rem;
+    margin: 0;
 }
 .dropdown-content-about button {
     border-radius: 0 0 1rem 1rem !important;
     padding: 2rem;
+    width: 14rem;
+}
+.dropdown-content-about button:hover a {
+    color: #eeeeee;
+}
+.dropdown-content-about button a {
+    font-size: 1.5rem;
+    color: rgb(0, 173, 181);
 }
