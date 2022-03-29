@@ -169,6 +169,7 @@ body {
     width: 14rem;
     margin: 0;
     font-size: 1.2rem;
+    user-select: none;
 }
 .dropdown-content-about button {
     border-radius: 0 0 1rem 1rem !important;
