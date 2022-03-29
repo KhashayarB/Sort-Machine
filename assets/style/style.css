@@ -1,80 +1,167 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Teko', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Teko", sans-serif;
 }
 body {
-    background-color: rgb(238, 238, 238) !important;
-    color: #EEEEEE !important;
-    height: 100vh;
+  background-color: rgb(238, 238, 238) !important;
+  color: #eeeeee !important;
+  height: 100vh;
 }
 .sort-box {
-    background-color: rgb(57, 62, 70);
-    box-shadow: rgb(57, 62, 70) 0px 25px 20px -20px;
-    border-radius: 0.5rem;
-    padding: 1rem;
+  background-color: rgb(57, 62, 70);
+  box-shadow: rgb(57, 62, 70) 0px 25px 20px -20px;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 .setting-btn {
-    padding: 0.4rem 0.7rem 0 0.7rem;
-    font-size: 2rem;
-    border-radius: 50%;
-    outline: none;
-    border: none;
-    background-color: rgb(0, 173, 181);
-    color: #393E46;
-    transition: all ease 0.3s;
-    justify-self: end;
+  padding: 0.4rem 0.7rem 0 0.7rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  background-color: rgb(0, 173, 181);
+  color: #393e46;
+  transition: all ease 0.3s;
+  justify-self: end;
 }
 .setting-btn:hover .fa-cog {
-    animation: cog-spin 6s infinite linear;
-    color: #EEEEEE;
-    transition: all ease 0.3s;
+  animation: cog-spin 6s infinite linear;
+  color: #eeeeee;
+  transition: all ease 0.3s;
 }
 .btn-p {
-    padding: 0.2rem 0.4rem;
-    font-size: 2rem;
-    border-radius: 0.5rem;
-    outline: none;
-    border: none;
-    background-color: rgb(0, 173, 181);
-    color: #393E46;
-    transition: all ease 0.3s;
+  padding: 0.2rem 0.4rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: rgb(0, 173, 181);
+  color: #393e46;
+  transition: all ease 0.3s;
+  position: relative;
 }
 .btn-p:hover {
-    color: #EEEEEE;
-    transition: all ease 0.3s;
+  color: #eeeeee;
+  transition: all ease 0.3s;
 }
 @keyframes cog-spin {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .length-input {
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    width: 3rem;
-    text-align: center;
-    border: 2px solid rgb(0, 173, 181);
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  width: 3rem;
+  text-align: center;
+  border: 2px solid rgb(0, 173, 181);
 }
 .index-list {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 .index-list span {
-    background-color: #EEEEEE;
-    color: #222831;
-    padding: 0.2rem 0.6rem;
-    position: relative;
-    border: 1px solid #222831;
-    font-size: 1.5rem;
+  background-color: #eeeeee;
+  color: #222831;
+  padding: 0.2rem 0.6rem;
+  position: relative;
+  border: 1px solid #222831;
+  font-size: 1.5rem;
 }
 .array-input {
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    width: 100%;
-    border: 2px solid rgb(0, 173, 181);
-    word-spacing: 8px;
-    padding-left: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+  border: 2px solid rgb(0, 173, 181);
+  word-spacing: 8px;
+  padding-left: 1rem;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: -0.5rem;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content::before {
+    content:"";
+    position: absolute;
+    left: 35%;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #eeeeee transparent;
+    z-index:2;
+}
+/* Links inside the dropdown */
+.dropdown-content button,
+.dropdown-content-about button {
+  color: #222831;
+  padding: 12px 16px;
+  display: block;
+  border: none;
+  outline: none;
+}
+.dropdown-content button:nth-child(1) {
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 1px solid #393e46;
+}
+.dropdown-content button:nth-child(3) {
+    border-radius: 0 0 1rem 1rem;
+    border-top: 1px solid #393e46;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover,
+.dropdown-content-about button:hover {
+  background-color: rgb(0, 173, 181);
+  color: #eeeeee;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content,
+.dropdown:hover .dropdown-content-about {
+  display: block;
+}
+
+.dropdown-content-about {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content-about::before {
+    content:"";
+    position: absolute;
+    left: 35%;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #eeeeee transparent;
+    z-index:2;
+}
+.dropdown-content-about p {
+    background-color: #eeeeee;
+    color: #393e46;
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem;
+}
+.dropdown-content-about button {
+    border-radius: 0 0 1rem 1rem !important;
+    padding: 2rem;
 }

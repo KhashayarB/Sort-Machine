@@ -36,8 +36,23 @@
       <div class="row sort-box mt-4">
         <div class="col-md-12 d-flex justify-content-around align-items-center">
           <h1 class="m-0">Sort Machine</h1>
-          <button class="setting-btn"><i class="fas fa-cog"></i></button>
+          <div class="dropdown">
+            <button class="setting-btn dropbtn">
+              <i class="fas fa-cog"></i>
+            </button>
+            <div class="dropdown-content">
+              <button id="alg1">Insertion Sort</button>
+              <button id="alg2">Merge Sort</button>
+              <button id="alg3">Quick Sort</button>
+            </div>
+          </div>
+          <div class="dropdown">
           <button class="btn-p">About</button>
+          <div class="dropdown-content-about">
+            <p>This App is a sort machine that takes numbers in an array and returns them sorted.</p>
+            <button><a href="https://github.com/KhashayarB">My GitHub</a></button>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -45,29 +60,23 @@
         <div class="col-md-12 d-flex justify-content-start gap-4">
           <button class="btn-p">Run</button>
           <button class="btn-p">Reset</button>
-          <select class="length-input">
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-          </select>
           <input
-           class="array-input" type="text" placeholder="Type some array values, or click 'Run' to use random values">
+            class="array-input"
+            id="arrayInput"
+            type="text"
+            placeholder="Type some array values, or click 'Run' to use random values"
+          />
         </div>
 
         <div class="row sort-box mt-4">
           <div class="col-md-12">
-              <ol class="index-list">
-                  <li><span>1</span></li>
-                  <li><span>2</span></li>
-                  <li><span>3</span></li>
-                  <li><span>4</span></li>
-                  <li><span>5</span></li>
-              </ol>
+            <ol class="index-list">
+              <li><span>1</span></li>
+              <li><span>2</span></li>
+              <li><span>3</span></li>
+              <li><span>4</span></li>
+              <li><span>5</span></li>
+            </ol>
           </div>
         </div>
       </div>
